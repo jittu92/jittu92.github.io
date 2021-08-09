@@ -1,0 +1,106 @@
+RewriteEngine On
+
+RewriteRule ^videoRecipies/([0-9]+) videoRecipies/?page_id=$1
+
+RewriteRule ^about.html?$ about.php
+RewriteRule ^recipie/([A-ZA-Z0-9]+) searchResults/viewRecipie/?recipieId=$1
+RewriteRule ^recipie/commentVerification.php searchResults/viewRecipie/commentVerification.php
+RewriteRule ^recipie/norecipie.php searchResults/viewRecipie/norecipie.php
+
+RewriteRule ^desserts/([0-9]+) searchResults/?category=desserts&page_id=$1
+RewriteRule ^desserts/ searchResults/?category=desserts
+
+RewriteRule ^appetizers/([0-9]+) searchResults/?category=appetizers&page_id=$1
+RewriteRule ^appetizers/ searchResults/?category=appetizers
+
+RewriteRule ^starters/([0-9]+) searchResults/?category=starters&page_id=$1
+RewriteRule ^starters/ searchResults/?category=starters
+
+RewriteRule ^main-course/([0-9]+) searchResults/?category=main-course&page_id=$1
+RewriteRule ^main-course/ searchResults/?category=main-course
+
+RewriteRule ^side-dishes/([0-9]+) searchResults/?category=side-dishes&page_id=$1
+RewriteRule ^side-dishes/ searchResults/?category=side-dishes
+
+RewriteRule ^mocktails/([0-9]+) searchResults/?category=mocktails&page_id=$1
+RewriteRule ^mocktails/ searchResults/?category=mocktails
+
+RewriteRule ^cocktails/([0-9]+) searchResults/?category=cocktails&page_id=$1
+RewriteRule ^cocktails/ searchResults/?category=cocktails
+
+
+RewriteRule ^user/([A-ZA-Z0-9]+)/([0-9]+) userProfile/?page_id=$2&userId=$1
+RewriteRule ^user/([A-ZA-Z0-9]+) userProfile/?userId=$1
+
+RewriteRule ^myprofile/myrecipies/ user_control_panel/recipies/
+RewriteRule ^myprofile/favourites/ user_control_panel/favourites/
+RewriteRule ^myprofile/addrecipie/ user_control_panel/editrecipie/
+RewriteRule ^myprofile/editrecipie/([A-ZA-Z0-9]+) user_control_panel/editrecipie/?recipie_id=$1
+RewriteRule ^myprofile/aboutme user_control_panel/aboutprofile/
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresActive On
+  ExpiresByType image/jpg "access 1 year"
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType text/css "access 1 year"
+  ExpiresByType text/html "access 1 year"
+  ExpiresByType application/pdf "access 1 year"
+  ExpiresByType text/x-javascript "access 1 year"
+  ExpiresByType application/x-shockwave-flash "access 1 year"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresDefault "access 1 year"
+  ExpiresByType application/pdf "access 1 year"
+  ExpiresByType application/javascript "access 1 year"
+  ExpiresByType application/x-javascript "access 1 year"
+  ExpiresByType application/x-shockwave-flash "access 1 year"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType application/x-font-opentype "access plus 1 year"
+  ExpiresByType application/x-font-woff "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresDefault "access 2 days"
+</IfModule>
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+<ifModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+mod_gzip_item_include handler ^cgi-script$
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>

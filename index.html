@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Debabrata Roy</title>
+    <style type="text/css">
+        .visible {
+            visibility: visible;
+            display: block;
+        }
+        .hidden {
+            visibility: hidden;
+            display: none;
+        }
+        .loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            animation: hideLoader 13s forwards;
+        }
+        @keyframes hideLoader {
+            90% {
+                opacity: 1.0
+            }
+            99% {
+                height: 100%;
+                width: 100%
+            }
+            100% {
+                opacity: 0.0;
+                height: 0%;
+                width: 0%
+            }
+        }
+        .spinner {
+            position: absolute;
+            z-index: 10000;
+            height: 150px;
+            width: 150px;
+            top: 40%;
+            left: 42%;
+            border-radius: 50%;
+            box-shadow: 5px 0px 10px #000;
+            animation: animate 2s linear infinite;
+        }
+        @keyframes animate {
+            0% {
+                box-shadow: 5px 0px 10px #000;
+            }
+            25% {
+                box-shadow: 0px 5px 10px #000;
+            }
+            50% {
+                box-shadow: -5px 0px 10px #000;
+            }
+            75% {
+                box-shadow: 0px -5px 10px #000;
+            }
+            100% {
+                box-shadow: 5px 0px 10px #000;
+            }
+        }
+        .loading {
+            position: absolute;
+            top: 45%;
+            left: 30%;
+            font-weight: bolder;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link href="css/compiled.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--div class="loader"><div class="spinner"><p class="loading">Loading</p></div></div-->
+    <div class="burgerMenu" id="burgerMenu" data-toggle="modal" data-target="#menuModal">
+        <div></div>
+    </div>
+    <div class="menuContainer">
+        <ul class="menuUl smooth-scroll">
+            <li class="menuItems"><a href="#home">Home</a></li>
+            <li class="menuItems"><a href="#about">About Me</a></li>
+            <li class="menuItems"><a href="#resume">Resume</a></li>
+            <li class="menuItems"><a href="#portfolio">Portfolio</a></li>
+            <li class="menuItems"><a href="#service">Services</a></li>
+            <li class="menuItems"><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="centerDiv">
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100" id="myModalLabel">Texus Leather</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <div class="view" data-toggle="modal" data-target="#basicExample">
+                                        <img src="img/folio3.png" class="img-fluid " alt="">
+                                        <div class="mask flex-center">
+                                            <div class="text-center galleryDescription"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-left modal-description">
+                                    <h4 class="b">Title</h4>
+                                    <h6>Texus Leather</h6>
+                                    <h4 class="b">URL</h4>
+                                    <h6>
+															<a href="http://debabrataroy.esy.es/leathercompany/" target="_blank">http://debabrataroy.esy.es/leathercompany/</a>
+														</h6>
+                                    <h4 class="b">Description</h4>
+                                    <h6>This is a demo leather company website template. The template is static. It's just the home page only, It doesn't contain any other pages</h6>
+                                    <h4 class="b">Skills</h4>
+                                    <h6 class="skills">
+															<div class="chip">HTML</div>
+															<div class="chip">CSS</div>
+															<div class="chip">BOOTSTRAP</div>
+															<div class="chip">JAVASCRIPT</div>
+														</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100" id="myModalLabel">Wedding Lovers</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <div class="view" data-toggle="modal" data-target="#basicExample">
+                                        <img src="img/folio5.png" class="img-fluid " alt="">
+                                        <div class="mask flex-center">
+                                            <div class="text-center galleryDescription"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-left modal-description">
+                                    <h4 class="b">Title</h4>
+                                    <h6>Wedding Lovers</h6>
+                                    <h4 class="b">URL</h4>
+                                    <h6>
+																<a href="http://debabrataroy.esy.es/weddinglovers/" target="_blank">http://debabrataroy.esy.es/weddinglovers/</a>
+															</h6>
+                                    <h4 class="b">Description</h4>
+                                    <h6>This is a demo wedding photographer's website template. The template is static. It contains pages like home, about, portfolio, packages, contactus, blog. Even user book a date using this web application.</h6>
+                                    <h4 class="b">Skills</h4>
+                                    <h6 class="skills">
+																<div class="chip">HTML</div>
+																<div class="chip">CSS</div>
+																<div class="chip">BOOTSTRAP</div>
+																<div class="chip">JAVASCRIPT</div>
+																<div class="chip">JQUERY</div>
+																<div class="chip">PHOTOSHP</div>
+															</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100" id="myModalLabel">My Ebook Library</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <div class="view" data-toggle="modal" data-target="#basicExample">
+                                        <img src="img/folio2.png" class="img-fluid " alt="">
+                                        <div class="mask flex-center">
+                                            <div class="text-center galleryDescription"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-left modal-description">
+                                    <h4 class="b">My Ebook Library</h4>
+                                    <h6>My Ebook Library</h6>
+                                    <h4 class="b">URL</h4>
+                                    <h6>
+																	<a href="http://myebooklibrary.esy.es" target="_blank">http://myebooklibrary.esy.es/</a>
+																</h6>
+                                    <h4 class="b">Description</h4>
+                                    <h6>Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</h6>
+                                    <h4 class="b">Skills</h4>
+                                    <h6 class="skills">
+																	<div class="chip">HTML</div>
+																	<div class="chip">CSS</div>
+																	<div class="chip">BOOTSTRAP</div>
+																	<div class="chip">JAVASCRIPT</div>
+																	<div class="chip">PHP</div>
+																	<div class="chip">MYSQL</div>
+																	<div class="chip">PHOTOSHP</div>
+																	<div class="chip">AJAX</div>
+																</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100" id="myModalLabel">Sample Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <div class="view" data-toggle="modal" data-target="#basicExample">
+                                        <img src="img/folio4.png" class="img-fluid " alt="">
+                                        <div class="mask flex-center">
+                                            <div class="text-center galleryDescription"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-left modal-description">
+                                    <h4 class="b">Title</h4>
+                                    <h6>Sample Login</h6>
+                                    <h4 class="b">URL</h4>
+                                    <h6>
+																		<a href="http://debabrataroy.esy.es/samplelogin/" target="_blank">http://debabrataroy.esy.es/samplelogin/</a>
+																	</h6>
+                                    <h4 class="b">Description</h4>
+                                    <h6>Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</h6>
+                                    <h4 class="b">Skills</h4>
+                                    <h6>
+																		<div class="chip">HTML</div>
+																		<div class="chip">CSS</div>
+																		<div class="chip">BOOTSTRAP</div>
+																	</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100" id="myModalLabel">Story Teller</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <div class="view" data-toggle="modal" data-target="#basicExample">
+                                        <img src="img/folio6.png" class="img-fluid " alt="">
+                                        <div class="mask flex-center">
+                                            <div class="text-center galleryDescription"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-left modal-description">
+                                    <h4 class="b">Title</h4>
+                                    <h6>Story Teller</h6>
+                                    <h4 class="b">URL</h4>
+                                    <h6>
+																			<a href="http://debabrataroy.esy.es/storyteller/" target="_blank">http://debabrataroy.esy.es/storyteller/</a>
+																		</h6>
+                                    <h4 class="b">Description</h4>
+                                    <h6>This is a demo wedding photographer's website template. The template is static. It contains pages like home, about, portfolio, packages, contactus, blog. Even user book a date using this web application.</h6>
+                                    <h4 class="b">Skills</h4>
+                                    <h6>
+																			<div class="chip">HTML</div>
+																			<div class="chip">CSS</div>
+																			<div class="chip">BOOTSTRAP</div>
+																			<div class="chip">JAVASCRIPT</div>
+																			<div class="chip">JQUERY</div>
+																			<div class="chip">PHOTOSHOP</div>
+																			<div class="chip">PHP</div>
+																		</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100" id="myModalLabel">Wow Recipies</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <div class="view" data-toggle="modal" data-target="#basicExample">
+                                        <img src="img/folio1.png" class="img-fluid " alt="">
+                                        <div class="mask flex-center">
+                                            <div class="text-center galleryDescription"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-left modal-description">
+                                    <h4 class="b">Title</h4>
+                                    <h6>Wow Recipies</h6>
+                                    <h4 class="b">URL</h4>
+                                    <h6>
+																				<a href="http://wowrecipies.com" target="_blank">http://wowrecipies.com</a>
+																			</h6>
+                                    <h4 class="b">Description</h4>
+                                    <h6>This project is based on a multi-user blogging platform, where people can share there recipes, read other's recipes.</h6>
+                                    <h4 class="b">Skills</h4>
+                                    <h6>
+																				<div class="chip">HTML</div>
+																				<div class="chip">CSS</div>
+																				<div class="chip">BOOTSTRAP</div>
+																				<div class="chip">JAVASCRIPT</div>
+																				<div class="chip">PHPTOSHOP</div>
+																				<div class="chip">JQUERY</div>
+																				<div class="chip">AJAX</div>
+																				<div class="chip">PHP</div>
+																				<div class="chip">MYSQL</div>
+																			</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid heroImage" id="home">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="contents white-text text-center">
+                    <h3>HELLO WORLD</h3>
+                    <p class="heading">I'm Debabrata Roy</p>
+                    <p class="h4 subheading">
+                        <span>PHP based Web Designer & Developer</span>
+                    </p>
+                    <ul class="smooth-scroll">
+                    	<li><a href="#about" class="moreAboutMe smooth-scroll">More About Me</a></li>
+                    </ul>
+                    
+                    <p class="mySocial">
+                        <a href="https://www.facebook.com/jittu92">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/debabrata-roy-78b8b0b0/">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/debabrata92">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://dribbble.com/debabrata92">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jittu1/">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="container-fluid about" id="about">
+        <div class="row nomargin">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="centerDiv">
+                    <p class="h5 b aboutheading">ABOUT</p>
+                    <p class="h1 aboutDescription">Let me introduce myself.</p>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-2 padding5">
+                            <img src="img/me.jpg" class="img-fluid img-circle">
+                        </div>
+                        <div class="col-sm-8 padding5 text-justify">Hello! I’m Debabrata Roy. Web Developer & designer with over 3 years of experience specializing in front end development. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including advanced HTML5, CSS3, Java, JavaScript, JQuery, Bootstrap, PHP, MySql. Strong background in management and leadership.</div>
+                    </div>
+                    <div class="row myDetails">
+                        <div class="col-sm-6">
+                            <p>PROFILE</p>
+                            <p class="smallAbout">Well I'm still a fresher, but I've worked on some freelance project & also internships on web design and development .</p>
+                            <p>FULL NAME:</p>
+                            <p>Debabrata Roy</p>
+                            <p>BIRTH DATE:</p>
+                            <p>December 8, 1992</p>
+                            <p>JOB:</p>
+                            <p>Freelancer, Frontend & Backend Developer</p>
+                            <p>WEBSITE:</p>
+                            <p>www.debabrataroy.esy.es</p>
+                            <p>CONTACT NO:</p>
+                            <p>+91 89616 33374</p>
+                            <p>EMAIL:</p>
+                            <p>jitturoy1992@gmail.com</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>SKILLS</p>
+                            <p class="smallAbout">I've learnt Web designing & development from online source. Below are the skills all I have</p>
+                            <p>HTML5</p>
+                            <div class="progresscontainer">
+                                <div class="progressbar1"></div>
+                            </div>
+                            <p>CSS3</p>
+                            <div class="progresscontainer">
+                                <div class="progressbar2"></div>
+                            </div>
+                            <p>JAVASCRIPT</p>
+                            <div class="progresscontainer">
+                                <div class="progressbar3"></div>
+                            </div>
+                            <p>BOOTSTRAP</p>
+                            <div class="progresscontainer">
+                                <div class="progressbar4"></div>
+                            </div>
+                            <p>PHP</p>
+                            <div class="progresscontainer">
+                                <div class="progressbar5"></div>
+                            </div>
+                            <p>MYSQL</p>
+                            <div class="progresscontainer">
+                                <div class="progressbar6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 smooth-scroll">
+                            <a href="#contact" class="hireButton">HIRE ME</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#!" class="downloadButton">DOWNLOAD RESUME</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="container-fluid resume" id="resume">
+        <div class="row nomargin">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="centerDiv">
+                    <p class="h5 b">RESUME</p>
+                    <p class="h1">More of my credentials.</p>
+                    <h3>Education is not the learning of facts, but the training of the mind to think. Education is a gift that none can take away. I am still learning every day.</h3>
+                </div>
+                <div class="container-fluid resumeContainer education">
+                    <p class="h2">Education</p>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4>Master Degree</h4>
+                            <h5>July 2015 - Present</h5>
+                        </div>
+                        <div class="col-sm-8">
+                            <i class="fa fa-graduation-cap resumeIcon"></i>
+                            <div class="smallScreenHiddenHeading">
+                                <h4>Master Degree</h4>
+                                <h5>July 2015 - Present</h5>
+                            </div>
+                            <h5>Master of Computer Application(MCA)</h5>
+                            <p>Pursuing MCA from Heritage Institute of Technology where I was taught about Computer science and the application areas of different subjects based on It emphasizes on planning, designing and building of complex commercial application software and system software.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4>Bachelors Degree</h4>
+                            <h5>July 2012 - June 2015</h5>
+                        </div>
+                        <div class="col-sm-8">
+                            <i class="fa fa-graduation-cap resumeIcon"></i>
+                            <div class="smallScreenHiddenHeading">
+                                <h4>Bachelors Degree</h4>
+                                <h5>July 2012 - June 2015</h5>
+                            </div>
+                            <h5>Bachelor of Computer Application(BCA)</h5>
+                            <p>I did my BCA course from Netaji Shubhas Engineering College, Kolkata.This program demonstrates sound knowledge in key areas of computer science or industrial computing. It also carries out the required analysis and synthesis involved in computer systems, information systems and computer applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid resumeContainer education">
+                    <p class="h2">Work Experience</p>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4>Intern</h4>
+                            <h5>May 2017 - Present</h5>
+                        </div>
+                        <div class="col-sm-8">
+                            <i class="fa fa-briefcase resumeIcon"></i>
+                            <div class="smallScreenHiddenHeading">
+                                <h4>Intern</h4>
+                                <h5>May 2017 - Present</h5>
+                            </div>
+                            <h5>Intern at <a href="http://www.webaddictz.in/" target="_blank">Webaddictz</a></h5>
+                            <p>Started internship as a web designer cum developer. During this period I've designed Websites across all platforms for our clients from various industries. Also did some Graphic Designing work with the use of Photoshop.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4>Freelance</h4>
+                            <h5>2015 - Present</h5>
+                        </div>
+                        <div class="col-sm-8">
+                            <i class="fa fa-briefcase resumeIcon"></i>
+                            <div class="smallScreenHiddenHeading">
+                                <h4>Freelance</h4>
+                                <h5>2015 - Present</h5>
+                            </div>
+                            <h5>Front End Developer at <a href="https://upwork.com">www.upwork.com</a></h5>
+                            <p>I did my BCA course from Netaji Shubhas Engineering College, Kolkata.This program demonstrates sound knowledge in key areas of computer science or industrial computing. It also carries out the required analysis and synthesis involved in computer systems, information systems and computer applications.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4>Freelance</h4>
+                            <h5>2015 - Present</h5>
+                        </div>
+                        <div class="col-sm-8">
+                            <i class="fa fa-briefcase resumeIcon"></i>
+                            <div class="smallScreenHiddenHeading">
+                                <h4>Freelance</h4>
+                                <h5>2015 - Present</h5>
+                            </div>
+                            <h5>Back End Developer at <a href="https://upwork.com">www.upwork.com</a></h5>
+                            <p>Well it's a freelance work.Though i have interest in both web design & development from an early age, but 3 years ago I came to know about this technology. Since then I've been learning & practicing on back end development. S </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="row nomargin">
+                <div class="centerDiv">
+                    <p class="h5 b">PORTFOLIO</p>
+                    <br>
+                    <p class="h1">Check Out Some of My Works.</p>
+                    <br>
+                    <h3>Created strong design concepts and developed design layouts for a variety of creative projects using web tools, you can see more at my portfolio.</h3>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-sm-6">
+                    <div class="view hm-black-strong hm-zoom " data-toggle="modal" data-target="#modal1">
+                        <img src="img/folio3.png" class="img-fluid " alt="">
+                        <div class="mask flex-center">
+                            <div class="text-center galleryDescription">
+                                <img src="img/foliologo3.png">
+                                <p class="white-text">Light overlay</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view hm-black-strong hm-zoom" data-toggle="modal" data-target="#modal3">
+                        <img src="img/folio2.png" class="img-fluid " alt="">
+                        <div class="mask flex-center">
+                            <div class="text-center galleryDescription">
+                                <img src="img/foliologo2.png" class="logo2">
+                                <p class="white-text">Light overlay</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view hm-black-strong hm-zoom" data-toggle="modal" data-target="#modal5">
+                        <img src="img/folio6.png" class="img-fluid " alt="">
+                        <div class="mask flex-center">
+                            <div class="text-center galleryDescription">
+                                <img src="img/foliologo6.PNG" class="logo2">
+                                <p class="white-text">Light overlay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="view hm-black-strong hm-zoom" data-toggle="modal" data-target="#modal2">
+                        <img src="img/folio5.png" class="img-fluid " alt="">
+                        <div class="mask flex-center">
+                            <div class="text-center galleryDescription">
+                                <img src="img/foliologo5.png" class="logo2">
+                                <p class="white-text">Light overlay</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view hm-black-strong hm-zoom" data-toggle="modal" data-target="#modal4">
+                        <img src="img/folio4.png" class="img-fluid " alt="">
+                        <div class="mask flex-center">
+                            <div class="text-center galleryDescription">
+                                <img src="img/foliologo4.png" class="logo4">
+                                <p class="white-text">Light overlay</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view hm-black-strong hm-zoom" data-toggle="modal" data-target="#modal6">
+                        <img src="img/folio1.png" class="img-fluid " alt="">
+                        <div class="mask flex-center">
+                            <div class="text-center galleryDescription">
+                                <img src="img/foliologo1.png" class="">
+                                <p class="white-text">Light overlay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service" id="service">
+        <div class="container-fluid rgba-black-strong">
+            <div class="row nomargin">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="centerDiv">
+                        <p class="h5 b">SERVICES</p>
+                        <p class="h1">What Can I Do For You?</p>
+                        <h3>Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</h3>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row nomargin">
+                <div class="col-md-4 white-text text-center servicecontents">
+                    <div class="centerDiv">
+                        <img src="img/world.png" class="serviceIcon1">
+                    </div>
+                    <h3>Web Design</h3>
+                    <p class="serviceDescription">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. </p>
+                </div>
+                <div class="col-md-4 white-text b text-center servicecontents">
+                    <div class="centerDiv">
+                        <img src="img/programming-code.png" class="serviceIcon2">
+                    </div>
+                    <h3>Web Development</h3>
+                    <p class="serviceDescription">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. </p>
+                </div>
+                <div class="col-md-4 white-text b text-center servicecontents">
+                    <div class="centerDiv">
+                        <img src="img/round-toggle.png" class="serviceIcon3">
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p class="serviceDescription">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="extra" id="extra">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-sm-4">
+                    <div class="centerDiv">
+                        <img src="img/pencil-box.png" class="extraIcon" />
+                        <p class="extraNums raleway">1500</p>
+                        <p class="extraDescription">PROJECTS COMPLETED</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <div class="centerDiv">
+                        <img src="img/users.png" class="extraIcon" />
+                        <p class="extraNums raleway">200</p>
+                        <p class="extraDescription">AWARDS RECEIVED</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <div class="centerDiv">
+                        <img src="img/medal.png" class="extraIcon" />
+                        <p class="extraNums raleway">1500</p>
+                        <p class="extraDescription">COFFEE CUPS</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <div class="centerDiv">
+                        <img src="img/light-bulb.png" class="extraIcon" />
+                        <p class="extraNums raleway">900</p>
+                        <p class="extraDescription">HAPPY CLIENTS</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <div class="centerDiv">
+                        <img src="img/coffee-cup.png" class="extraIcon" />
+                        <p class="extraNums raleway">120</p>
+                        <p class="extraDescription">CRAZY IDEAS</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4">
+                    <div class="centerDiv">
+                        <img src="img/time.png" class="extraIcon" />
+                        <p class="extraNums raleway">7200</p>
+                        <p class="extraDescription">HOURS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="container-fluid">
+            <div class="row nomargin">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="centerDiv">
+                        <p class="h5 b">CONTACT</p>
+                        <p class="h1">I'd Love To Hear From You.</p>
+                        <h3>Please feel fee to leave a message to me. I would love to hear from you anytime. Also you can call me or push me a message to my social networks. Thank you Regards -</h3>
+                    </div>
+                    <!--div class="container">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8 contactForm">
+                                <form>
+                                    <div class="md-form form-sm">
+                                        <input type="text" id="inputName" class="form-control">
+                                        <label for="inputName" class="">Name</label>
+                                    </div>
+                                    <div class="md-form form-sm">
+                                        <input type="email" id="inputEmail" class="form-control">
+                                        <label for="inputEmail" class="">Email</label>
+                                    </div>
+                                    <div class="md-form form-sm">
+                                        <input type="text" id="inputPhone" class="form-control">
+                                        <label for="inputPhone" class="">Phone</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <textarea type="text" id="inputMessage" class="md-textarea"></textarea>
+                                        <label for="inputMessage">Message</label>
+                                    </div>
+                                    <input type="submit" name="" class="submitButton">
+                                </form>
+                            </div>
+                        </div>
+                    </div-->
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container contact" id="contactDetails">
+        <div class="row nomargin">
+            <div class="col-md-4">
+                <div class="centerDiv" class="footercontents">
+                    <img src="img/map-marker-point.png" class="footerIcon">
+                    <br>
+                    <p class="firstp">WHERE TO FIND ME</p>
+                    <p class="nextp">91/F B.L Saha Road,
+                        <br>Kolkata-700053
+                        <br>West Bengal
+                        <br>India
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="centerDiv" class="footercontents">
+                    <img src="img/envelope.png" class="footerIcon">
+                    <br>
+                    <p class="firstp">EMAIL ME AT</p>
+                    <p class="nextp">jitturoy1992@gmail.com
+                        <br>debabrataroy1992@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="centerDiv" class="footercontents">
+                    <img src="img/phone-call.png" class="footerIcon">
+                    <br>
+                    <p class="firstp">CALL ME AT</p>
+                    <p class="nextp"><a href="tel:+918961633374" class="grey-text">(+91) 89616 33374</a>
+                        <br><i class="fa fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=+918961633374" class="grey-text">8961633374</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row copyrightRow">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <p class="copyright">© Copyright
+                    <a href="#!" class="copyrightLink">Debabrata Roy</a> 2016. | Designed By me
+                </p>
+            </div>
+            <div class="col-md-5">
+                <p class="footerSocial">
+                    <a href="#!">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#!">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#!">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#!">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                    <a href="#!">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    <div class="smooth-scroll topButton" onclick="scrollToTop();return false">
+        <img src="img/top.png">
+    </div>
+    <script type="text/javascript">
+        var timeOut;
+
+        function scrollToTop() {
+            if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+                window.scrollBy(0, -50);
+                timeOut = setTimeout('scrollToTop()', 10);
+            } else clearTimeout(timeOut);
+        }
+    </script>
+    <script type="text/javascript" src="js/compiled.min.js" ></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#burgerMenu').click(function(){
+                $('#burgerMenu').toggleClass('active');
+                $('.menuContainer').toggleClass('active');
+            });
+            $('.menuContainer ul li a').click(function(){
+                $('#burgerMenu').toggleClass('active');
+                $('.menuContainer').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
